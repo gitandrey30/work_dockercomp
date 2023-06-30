@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  client1:
+    build:
+      dockerfile: client1/Dockerfile
+    volumes:
+      - client_data: ./client_data
+    command:
+      - "python main1.py"
+  client2:
+    build:
+      dockerfile: client2/Dockerfile
+    volumes:
+      -
+    command:
+      - "python main2.py"
